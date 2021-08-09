@@ -1,8 +1,10 @@
-require 'prime_generator'
-
 describe PrimeGenerator do
   before do
     @test_pg = PrimeGenerator.new
+  end
+
+  RSpec.configure do |config|
+    config.formatter = :documentation
   end
 
   describe "required criteria:" do
@@ -39,7 +41,7 @@ describe PrimeGenerator do
     context "given a double or float value" do
       it 'should raise an error' do
         expect{@test_pg.prime_generator(77.3, 53)}.to raise_error(/Invalid input detected/)
-        expect{@test_pg.prime_generator(1, 168.6642)}.to raise_error(/Invalid input detected/)
+        expect{@test_pg.prime_generator(2, 168.6642)}.to raise_error(/Invalid input detected/)
         expect{@test_pg.prime_generator(4.3, 17.72)}.to raise_error(/Invalid input detected/)
       end
     end

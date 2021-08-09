@@ -1,9 +1,10 @@
 require 'prime'
+require 'rspec'
 
 class PrimeGenerator
   def prime_generator (start_point, end_point)
     #should take both end points, run through all numbers, return a list of all prime numbers inclusive of those points
-    #checks to
+    #checks to verify that both points are valid
     unless start_point.is_a? Integer and end_point.is_a? Integer
       raise "Invalid input detected."
     end
@@ -22,19 +23,18 @@ class PrimeGenerator
       arr = (start_point..end_point).to_a
     end
     filtered_arr = arr.select { |pr| pr if Prime.prime?(pr)}
-    puts filtered_arr.join(', ') #for visual verification of primes
     return filtered_arr
   end
 
   def prime_request_module
     #where the user enters in the prime numbers
-    puts "Prime Number Generator v0.000001"
+    puts "Prime Number Generator v0.1"
     print "Enter in the starting value(integer): "
     sv = verify_integer
     print "Enter in the ending value(integer): "
     ev = verify_integer
     puts "The primes for the specified numbers are: "
-    prime_generator(sv, ev)
+    puts prime_generator(sv, ev).join(', ')
   end
 
   def verify_integer
@@ -47,5 +47,6 @@ class PrimeGenerator
     end
     return entered_value
   end
+
 end
 
