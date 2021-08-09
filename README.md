@@ -12,6 +12,6 @@ All unit tests should pass and provide 100% code coverage.
 
 ## Execution
 1. Either clone the repository using the IDE or command line interface of your choice, or download the code directly from github by clicking on the Code button and selecting 'Download Zip'.
-2. Verify that the required gems have been installed (in this case, rspec). Run bundle install to install the required gems.
-3. In RubyMine, open the main.rb file within the 'lib' directory and click the Run button OR if running from the command line, navigate to where the repository was placed. Navigate further to the 'lib' directory and then type ||ruby main.rb||.  
+2. Verify that the required gems have been installed (in this case, rspec). Run `bundle install` in your IDE or via command line to install the required gems.
+3. In RubyMine, open the main.rb file within the 'lib' directory and click the Run button OR if running from the command line, navigate to where the repository was placed. Navigate further to the 'lib' directory and then type `ruby main.rb` and hit Enter/Return.  
 The rspec tests should run first, and then should prompt the user for the first and second integers with which to create a range.
